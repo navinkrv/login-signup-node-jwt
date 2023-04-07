@@ -15,7 +15,7 @@ app.use("/api/mailer",mailRouter)
 
 
 mongoose.connect('mongodb+srv://navinkey5:NvSBjCywRoYc87Cd@cluster0.kyizd86.mongodb.net/?retryWrites=true&w=majority').then(()=>{
-    app.listen( 5000 ); 
+    app.listen( process.env.PORT ); 
 }).then(()=>{
     console.log('connected')
 }).catch((err)=>{
