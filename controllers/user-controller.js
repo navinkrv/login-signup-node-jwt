@@ -13,10 +13,12 @@ const jwt =require("jsonwebtoken")
     }
 
     if(!users){
-        return res.status(404).json({msg:"no users found"})
+       res.setHeader("Access-Control-Allow-Origin", "*")
+         res.status(404).json({msg:"no users found"})
     }
     else{
-        return res.status(200).json({users})
+         res.setHeader("Access-Control-Allow-Origin", "*")
+         res.status(200).json({users})
     }
 }
 
