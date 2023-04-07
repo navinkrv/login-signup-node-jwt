@@ -13,9 +13,7 @@ app.use(express.json())
 app.use("/api/user",router)
 app.use("/api/mailer",mailRouter)
 
-var corsOptions={
-    origin:"https://localhost:3000"
-}
+
 
 app.use(cors())
 
