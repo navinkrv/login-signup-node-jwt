@@ -13,7 +13,11 @@ app.use(express.json())
 app.use("/api/user",router)
 app.use("/api/mailer",mailRouter)
 
-app.use(cors())
+var corsOptions={
+    origin:"https://localhost:3000"
+}
+
+app.use(cors(corsOptions))
 
 mongoose.connect('mongodb+srv://navinkey5:NvSBjCywRoYc87Cd@cluster0.kyizd86.mongodb.net/?retryWrites=true&w=majority').then(()=>{
     app.listen( process.env.PORT ); 
