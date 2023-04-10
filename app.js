@@ -20,7 +20,7 @@ app.use(cors())
 mongoose.connect('mongodb+srv://navinkey5:NvSBjCywRoYc87Cd@cluster0.kyizd86.mongodb.net/?retryWrites=true&w=majority').then(()=>{
     app.listen( process.env.PORT ); 
 }).then(()=>{
-    console.log('connected to database')
+    console.log('connected to database successfully')
 }).catch((err)=>{
     console.log(err)
 })
